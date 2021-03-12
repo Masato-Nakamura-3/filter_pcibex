@@ -60,7 +60,7 @@ Template(
         getText("cross")
             .remove()
         ,
-        newText("stimulus", row.w1)
+        newText("w1", row.w1)
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
@@ -71,7 +71,7 @@ Template(
             .start()
             .wait()
         ,
-        getText("stimulus")
+        getText("w1")
             .remove()
         ,
         newTimer(230)
@@ -79,7 +79,7 @@ Template(
             .wait()
         ,
 
-        newText("stimulus", row.w2)
+        newText("w2", row.w2)
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
@@ -90,7 +90,7 @@ Template(
             .start()
             .wait()
         ,
-        getText("stimulus")
+        getText("w2")
             .remove()
         ,
         newTimer(230)
@@ -98,7 +98,7 @@ Template(
             .wait()
         ,
 
-        newText("stimulus", row.w3)
+        newText("w3", row.w3)
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
@@ -109,7 +109,7 @@ Template(
             .start()
             .wait()
         ,
-        getText("stimulus")
+        getText("w3")
             .remove()
         ,
         newTimer(230)
@@ -128,6 +128,6 @@ Template(
         )
         .log("subject_id", subject_id)
         .log("item_id", row.item_id)
-        .log("condition", row.a)
+        .log("condition", row.condition)
         .setOption("hideProgressBar", true)
     )
