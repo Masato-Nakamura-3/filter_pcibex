@@ -61,12 +61,9 @@ Template(
             .remove()
         ,
         newText("w1", row.w1)
-            .css({"font-size":"40", "color":"red"})
+            .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
-//        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-//            .record()
-//        ,
         newTimer(300)
             .start()
             .wait()
@@ -78,14 +75,10 @@ Template(
             .start()
             .wait()
         ,
-
         newText("w2", row.w2)
-            .css({"font-size":"40", "color":"red"})
+            .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
-//        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-//            .record()
-//        ,
         newTimer(300)
             .start()
             .wait()
@@ -99,12 +92,9 @@ Template(
         ,
 
         newText("w3", row.w3)
-            .css({"font-size":"40", "color":"red"})
+            .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
-//        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-//            .record()
-//        ,
         newTimer(300)
             .start()
             .wait()
@@ -116,6 +106,106 @@ Template(
             .start()
             .wait()
         ,
+
+        newText("w4", row.w4)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w4")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w5", row.w5)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w5")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w5", row.w5)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w5")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w6", row.w6)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w6")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w7", row.w7)
+            .css({"font-size":"40", "color":"red"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w7")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w8", row.w8)
+            .css({"font-size":"40", "color":"red"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w8")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+//        newMediaRecorder(row.filename+"_"+subject_id,"audio")
+//            .record()
+//        ,
 
 //        getMediaRecorder(row.filename+"_"+subject_id)
 //            .stop()
