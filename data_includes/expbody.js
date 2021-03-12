@@ -66,7 +66,7 @@ Template(
         ,
 //        newMediaRecorder(row.filename+"_"+subject_id,"audio")
 //            .record()
-        ,
+//        ,
         newTimer(300)
             .start()
             .wait()
@@ -83,9 +83,9 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-            .record()
-        ,
+//        newMediaRecorder(row.filename+"_"+subject_id,"audio")
+//            .record()
+//        ,
         newTimer(300)
             .start()
             .wait()
@@ -104,7 +104,7 @@ Template(
         ,
 //        newMediaRecorder(row.filename+"_"+subject_id,"audio")
 //            .record()
-        ,
+//        ,
         newTimer(300)
             .start()
             .wait()
@@ -119,7 +119,7 @@ Template(
 
 //        getMediaRecorder(row.filename+"_"+subject_id)
 //            .stop()
-        ,
+//        ,
         newText("Press the space bar")
             .print("center at 50vw", "middle at 40vh")
         ,
