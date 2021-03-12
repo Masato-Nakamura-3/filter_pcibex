@@ -186,7 +186,24 @@ Template(
             .start()
             .wait()
         ,
+        if (row.context_n > 8) {
 
+        newText("w9", row.w9)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w9")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        }
+        ,
 //        newMediaRecorder(row.filename+"_"+subject_id,"audio")
 //            .record()
 //        ,
