@@ -156,7 +156,7 @@ Template(
         ,
 
         newText("w7", row.w7)
-            .css({"font-size":"40", "color":"red"})
+            .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
         newTimer(300)
@@ -172,7 +172,7 @@ Template(
         ,
 
         newText("w8", row.w8)
-            .css({"font-size":"40", "color":"red"})
+            .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
         newTimer(300)
