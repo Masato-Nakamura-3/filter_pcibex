@@ -139,22 +139,6 @@ Template(
             .wait()
         ,
 
-        newText("w5", row.w5)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w5")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
         newText("w6", row.w6)
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
