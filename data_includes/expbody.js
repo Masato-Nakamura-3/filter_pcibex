@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence(randomize(anyof("exp8", "exp9")));
+Sequence(randomize(anyOf("exp8", "exp9")));
 
 //Edit the uploading error message
 const replaceUploadingErrorMessage = ()=>{
