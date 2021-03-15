@@ -3,6 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
+Sequence(randomize("exp8", "exp9"));
 
 //Edit the uploading error message
 const replaceUploadingErrorMessage = ()=>{
@@ -172,7 +173,7 @@ Template(
         ,
 
         newText("w8", row.w8)
-            .css({"font-size":"40"})
+            .css({"font-size":"40", , "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
         newTimer(300)
@@ -351,7 +352,7 @@ Template(
         ,
 
         newText("w9", row.w9)
-            .css({"font-size":"40"})
+            .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
         newTimer(300)
