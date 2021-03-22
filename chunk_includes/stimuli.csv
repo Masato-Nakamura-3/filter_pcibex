@@ -23,8 +23,8 @@ item_id,condition,item,context_n,Group,w1,w2,w3,w4,w5,w6,w7,w8,w9,target,type,fi
 11,b,71b.,8,B,The,nanny,knew,which,billionaire,the,housekeeper,had,,hired,exp,11b
 12,a,72a.,8,B,The,researcher,learned,which,whale,the,biologist,had,,studied,exp,12a
 12,b,72b.,8,A,The,researcher,learned,which,biologist,the,whale,had,,studied,exp,12b
-13,a,73a.,8,A,Tracy,announced,which,applicant,the,administrator,had,,,chosen,exp,13a
-13,b,73b.,8,B,Tracy,announced,which,administrator,the,applicant,had,,,chosen,exp,13b
+13,a,73a.,7,A,Tracy,announced,which,applicant,the,administrator,had,,,chosen,exp,13a
+13,b,73b.,7,B,Tracy,announced,which,administrator,the,applicant,had,,,chosen,exp,13b
 14,a,74a.,9,B,The,birthday,boy,saw,which,friend,the,clown,had,scared,exp,14a
 14,b,74b.,9,A,The,birthday,boy,saw,which,clown,the,friend,had,scared,exp,14b
 15,a,75a.,8,A,The,columnist,publicized,which,photographer,the,celebrity,had,,punched,exp,15a
@@ -69,8 +69,8 @@ item_id,condition,item,context_n,Group,w1,w2,w3,w4,w5,w6,w7,w8,w9,target,type,fi
 34,b,94b.,8,A,The,sheriff,recalled,which,gangsters,the,locals,had,,robbed,exp,34b
 35,a,95a.,9,A,The,undead,king,recognized,which,woman,the,zombie,had,bitten,exp,35a
 35,b,95b.,9,B,The,undead,king,recognized,which,zombie,the,woman,had,bitten,exp,35b
-36,a,96a.,8,B,Tonia,explained,which,housewife,the,conman,had,,,swindled,exp,36a
-36,b,96b.,8,A,Tonia,explained,which,conman,the,housewife,had,,,swindled,exp,36b
+36,a,96a.,7,B,Tonia,explained,which,housewife,the,conman,had,,,swindled,exp,36a
+36,b,96b.,7,A,Tonia,explained,which,conman,the,housewife,had,,,swindled,exp,36b
 37,a,97a.,8,A,The,broadcaster,explained,which,contestant,the,judge,had,,disqualified,exp,37a
 37,b,97b.,8,B,The,broadcaster,explained,which,judge,the,contestant,had,,disqualified,exp,37b
 38,a,98a.,9,B,The,campaign,volunteer,speculated,which,mayor,the,voters,had,elected,exp,38a
@@ -105,10 +105,10 @@ item_id,condition,item,context_n,Group,w1,w2,w3,w4,w5,w6,w7,w8,w9,target,type,fi
 52,b,112b.,8,A,The,policeman,knew,which,detective,the,suspect,had,,arrested,exp,52b
 53,a,113a.,8,A,The,priest,knew,which,demon,the,exorcist,had,,expelled,exp,53a
 53,b,113b.,8,B,The,priest,knew,which,exorcist,the,demon,had,,expelled,exp,53b
-54,a,114a.,8,B,Jack,observed,which,passenger,the,conductor,had,,,removed,exp,54a
-54,b,114b.,8,A,Jack,observed,which,conductor,the,passenger,had,,,removed,exp,54b
-55,a,115a.,8,A,Teresa,knew,which,neighbor,the,parrot,had,,,bitten,exp,55a
-55,b,115b.,8,B,Teresa,knew,which,parrot,the,neighbor,had,,,bitten,exp,55b
+54,a,114a.,7,B,Jack,observed,which,passenger,the,conductor,had,,,removed,exp,54a
+54,b,114b.,7,A,Jack,observed,which,conductor,the,passenger,had,,,removed,exp,54b
+55,a,115a.,7,A,Teresa,knew,which,neighbor,the,parrot,had,,,bitten,exp,55a
+55,b,115b.,7,B,Teresa,knew,which,parrot,the,neighbor,had,,,bitten,exp,55b
 56,a,116a.,9,B,The,art,critic,identified,which,model,the,artist,had,drawn,exp,56a
 56,b,116b.,9,A,The,art,critic,identified,which,artist,the,model,had,drawn,exp,56b
 57,a,117a.,9,A,The,cotton,farmer,wondered,which,master,the,slave,had,escaped,exp,57a

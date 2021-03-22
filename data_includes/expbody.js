@@ -5,19 +5,6 @@ PennController.ResetPrefix(null);
 // Make sure you include InitiateRecorder and SendResults
 Sequence(randomize(anyOf("exp8", "exp9")));
 
-//Edit the uploading error message
-const replaceUploadingErrorMessage = ()=>{
-    const uploadingErrorMessage = $(".PennController-PennController p:nth-child(2)");
-    if (uploadingErrorMessage.length > 0 && uploadingErrorMessage[0].innerHTML.match(/^There was an error uploading the recordings:/))
-        uploadingErrorMessage.html("サーバーにデータをアップロードする際に問題が発生しました。<br>下のリンクから録音データをダウンロードしてください。ダウンロードしたファイルは、解凍せずにファイル名を'[クラウドワーカー名]_[参加者ID]'とした上で、https://ter.ps/clearupload0にアップロードしてください。(例:田中太郎_hd8kT37g)")//The text for the error message
-            .siblings(".Message-continue-link").html("録音データをダウンロードする");//The text for the link to the recordings
-    else
-        window.requestAnimationFrame( replaceUploadingErrorMessage );
-};
-replaceUploadingErrorMessage();
-
-
-
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
 function getRandomStr(){
@@ -35,14 +22,15 @@ function getRandomStr(){
 // Generate a subject ID
 const subject_id = getRandomStr()
 
-// Consent form
+newTrial(
+    newText("test", "This is a test")
+        .print()
+    ,
+    newKey(" ")
+        .wait()
+)
 
 
-// Initiate recorder for later use
-// This part also inserts a consent for recording
-// The consent link can be edited by the script above (replaceConsentMic)
-// The URL should be referring to the php file in your directory in your server
-// See the LSC server instruction for the detail
 
 //body of the short trials
 Template(
