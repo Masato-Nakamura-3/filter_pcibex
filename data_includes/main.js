@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("consent_form",randomize(anyOf("exp8", "exp9")));
+Sequence("consent_form","introduction",randomize(anyOf("exp8", "exp9")));
 
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
@@ -38,7 +38,14 @@ newTrial("consent_form",
             .failure( getHtml("consent").warn() ))
 ).setOption("hideProgressBar", true);
 
-
+newTrial("introduction",
+    newHtml("introduction.html")
+        .print()
+    ,
+    newButton("Proceed")
+        .print()
+        .wait()
+).setOption("hideProgressBar", true);
 
 
 //body of the short trials
