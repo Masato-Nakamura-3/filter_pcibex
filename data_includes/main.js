@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence(randomize(anyOf("exp8", "exp9")));
+Sequence("consent_form",randomize(anyOf("exp8", "exp9")));
 
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
@@ -22,13 +22,22 @@ function getRandomStr(){
 // Generate a subject ID
 const subject_id = getRandomStr()
 
-newTrial(
-    newText("test", "This is a test")
+// Consent form
+newTrial("consent_form",
+    newHtml("consent", "consent.html")
+        .settings.checkboxWarning("Required")
+        .settings.radioWarning("Required")
+        .settings.inputWarning("Required")
         .print()
+        .log()
     ,
-    newKey(" ")
-        .wait()
-)
+    newButton("I agree to participate in this study")
+        .print()
+        .wait(
+            getHtml("consent").test.complete()
+            .failure( getHtml("consent").warn() ))
+).setOption("hideProgressBar", true);
+
 
 
 
