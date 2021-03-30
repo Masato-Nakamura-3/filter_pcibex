@@ -47,6 +47,15 @@ newTrial("introduction",
         .wait()
 ).setOption("hideProgressBar", true);
 
+// Istruction
+newTrial("instruction",
+    newHtml("instruction.html")
+        .print()
+    ,
+    newButton("See good and bad examples")
+        .print()
+        .wait()
+    ).setOption("hideProgressBar", true);
 
 //body of the short trials
 Template(
