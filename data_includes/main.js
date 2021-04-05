@@ -3,7 +3,9 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("consent_form", "initiate-recorder","introduction",randomize(anyOf("exp8", "exp9")));
+Sequence("initiate-recorder", "recording_test","introduction",randomize(anyOf("exp8", "exp9")));
+
+// Add "consent_form",  before publishing
 
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
