@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction",randomize(anyOf("exp8", "exp9")));
+Sequence("initiate-recorder", "recording_test","introduction",randomize(anyOf("exp7", "exp8", "exp9")));
 
 // Add "consent_form",  before publishing
 
@@ -241,7 +241,7 @@ Template(
             .remove()
         ,
 
-        newTimer(4000)
+        newTimer(3000)
             .start()
             .wait()
         ,
@@ -402,7 +402,7 @@ Template(
         getText("w8")
             .remove()
         ,
-        newTimer(4000)
+        newTimer(3000)
             .start()
             .wait()
         ,
@@ -578,7 +578,7 @@ Template(
         getText("w9")
             .remove()
         ,
-        newTimer(4000)
+        newTimer(3000)
             .start()
             .wait()
         ,
