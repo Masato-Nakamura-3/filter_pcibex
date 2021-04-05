@@ -46,6 +46,33 @@ InitiateRecorder("https://hjpatt-136.umd.edu/Web_Experiments/Phillips/Masato/PCI
     .label("initiate-recorder");
 
 
+newTrial("recording_test",
+    newText("This experiment involves audio recording.  Before you start the experiment, please test your recording.")
+        .bold()
+        .print()
+    ,
+    newText("Please record yourself saying the sentence 'This is a test' (this recording will be saved).  To start the recording, press the red button below.  To stop the recording, press it again.  To test whether your voice was recorded, click the green play button.<br><br>")
+        .print()
+    ,
+    newMediaRecorder("test-recorder", "audio")
+        .print()
+    ,
+    newText("<br>Make sure you can hear your voice clearly in the playback before you continue.<br>")
+        .print()
+    ,
+    newText("During the experiment, recordings will start and stop automatically.  There is a notification at the top of the page that will indicate when audio is being recorded.<br><br>")
+        .print()
+    ,
+    newButton("continue", "Click here to continue")
+    .print()
+    .wait(
+        getMediaRecorder("test-recorder").test.recorded()
+            .failure(
+                newText("Please test your audio recording before continuing")
+                    .color("red")
+                    .print())
+      )
+).setOption("hideProgressBar", true);
 
 newTrial("introduction",
     newHtml("introduction.html")
