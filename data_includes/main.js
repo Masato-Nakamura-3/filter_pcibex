@@ -7,6 +7,19 @@ Sequence("initiate-recorder", "recording_test","introduction",randomize(anyOf("e
 
 // Add "consent_form",  before publishing
 
+
+
+const replaceUploadingErrorMessage = ()=>{
+    const uploadingErrorMessage = $(".PennController-PennController p:nth-child(2)");
+    if (uploadingErrorMessage.length > 0 && uploadingErrorMessage[0].innerHTML.match(/^There was an error uploading the recordings:/))
+        uploadingErrorMessage.html("There was an error uploading the recordings.<br>Please download the recordings from the link below and upload it following the instructions on the AMT webpage.")
+            .siblings(".Message-continue-link").html("Download the recordings");//The text for the link to the recordings
+    else
+        window.requestAnimationFrame( replaceUploadingErrorMessage );
+};
+replaceUploadingErrorMessage();
+
+
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
 function getRandomStr(){
@@ -53,7 +66,7 @@ newTrial("recording_test",
         .bold()
         .print()
     ,
-    newText("Please record yourself saying the sentence 'This is a test' (this recording will be saved).  To start the recording, press the red button below.  To stop the recording, press it again.  To test whether your voice was recorded, click the green play button.<br><br>")
+    newText("Please record yourself saying the sentence 'This is a test' (this recording will be saved).  To start the recording, press the Record button.  To stop the recording, press Stop.  To test whether your voice was recorded, click the play button.<br><br>")
         .print()
     ,
     newMediaRecorder("test-recorder", "audio")
