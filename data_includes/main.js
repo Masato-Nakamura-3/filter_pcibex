@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("consent_form","introduction",randomize(anyOf("exp8", "exp9")));
+Sequence("consent_form", "initiate-recorder","introduction",randomize(anyOf("exp8", "exp9")));
 
 // Define a function to generate subject IDs which is a squence of 4 letters
 // The ID is used to name the recording files
@@ -22,6 +22,7 @@ function getRandomStr(){
 // Generate a subject ID
 const subject_id = getRandomStr()
 
+
 // Consent form
 newTrial("consent_form",
     newHtml("consent", "consent.html")
@@ -38,6 +39,14 @@ newTrial("consent_form",
             .failure( getHtml("consent").warn() ))
 ).setOption("hideProgressBar", true);
 
+
+
+InitiateRecorder("https://hjpatt-136.umd.edu/Web_Experiments/Phillips/Masato/PCIbex.php")
+    .setOption("hideProgressBar", true)
+    .label("initiate-recorder");
+
+
+
 newTrial("introduction",
     newHtml("introduction.html")
         .print()
@@ -46,6 +55,9 @@ newTrial("introduction",
         .print()
         .wait()
 ).setOption("hideProgressBar", true);
+
+
+
 
 // Istruction
 newTrial("instruction",
@@ -56,6 +68,11 @@ newTrial("instruction",
         .print()
         .wait()
     ).setOption("hideProgressBar", true);
+
+
+
+
+
 
 //body of the short trials
 Template(
