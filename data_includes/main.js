@@ -585,7 +585,7 @@ Template(
         getMediaRecorder(row.filename+"_"+subject_id)
             .stop()
         ,
-                ,
+
         newText("Press the space bar")
             .print("center at 50vw", "middle at 40vh")
         ,
