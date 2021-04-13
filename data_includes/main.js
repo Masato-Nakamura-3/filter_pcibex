@@ -114,7 +114,7 @@ newTrial("instruction",
 
 
 Template(
-    GetTable("stimuli.csv")
+    GetTable("stimuli_short.csv")
     , row =>
     newTrial("exp",
         newVar("length", row.context_n)
