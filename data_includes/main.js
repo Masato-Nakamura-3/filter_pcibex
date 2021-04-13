@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction",randomize(anyOf("exp7", "exp8", "exp9")));
+Sequence("initiate-recorder", "recording_test","introduction",randomize("exp"));
 
 // Add "consent_form",  before publishing
 
@@ -113,13 +113,12 @@ newTrial("instruction",
 
 
 
-
-
 Template(
     GetTable("stimuli.csv")
-        .filter( row => row.context_n == 7)
     , row =>
-    newTrial("exp7",
+    newTrial("exp",
+        newVar("length", row.context_n)
+        ,
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
@@ -225,8 +224,58 @@ Template(
             .start()
             .wait()
         ,
-
-        newText("w7", row.w7)
+        getVar("length")
+            .test.is(8)
+            .success(
+                newText("w7", row.w7)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w7")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+            .test.is(9)
+            .success(
+                newText("w7", row.w7)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w7")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+                ,
+                newText("w8", row.w8)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w8")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newText("probe", row.probe)
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
@@ -237,345 +286,7 @@ Template(
             .start()
             .wait()
         ,
-        getText("w7")
-            .remove()
-        ,
-
-        newTimer(3000)
-            .start()
-            .wait()
-        ,
-        getMediaRecorder(row.filename+"_"+subject_id)
-            .stop()
-        ,
-        newText("Press the space bar")
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newKey(" ")
-            .wait()
-        )
-        .log("subject_id", subject_id)
-        .log("item_id", row.item_id)
-        .log("condition", row.condition)
-        .setOption("hideProgressBar", true)
-    )
-
-
-Template(
-    GetTable("stimuli.csv")
-        .filter( row => row.context_n == 8)
-    , row =>
-    newTrial("exp8",
-        newText("cross","+")
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(800)
-            .start()
-            .wait()
-        ,
-        getText("cross")
-            .remove()
-        ,
-        newText("w1", row.w1)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w1")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-        newText("w2", row.w2)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w2")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w3", row.w3)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w3")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w4", row.w4)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w4")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w5", row.w5)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w5")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w6", row.w6)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w6")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w7", row.w7)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w7")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w8", row.w8)
-            .css({"font-size":"40", "color":"red"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-            .record()
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w8")
-            .remove()
-        ,
-        newTimer(3000)
-            .start()
-            .wait()
-        ,
-        getMediaRecorder(row.filename+"_"+subject_id)
-            .stop()
-        ,
-        newText("Press the space bar")
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newKey(" ")
-            .wait()
-        )
-        .log("subject_id", subject_id)
-        .log("item_id", row.item_id)
-        .log("condition", row.condition)
-        .setOption("hideProgressBar", true)
-    )
-
-Template(
-    GetTable("stimuli.csv")
-        .filter( row => row.context_n == 9)
-    , row =>
-    newTrial("exp9",
-        newText("cross","+")
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(800)
-            .start()
-            .wait()
-        ,
-        getText("cross")
-            .remove()
-        ,
-        newText("w1", row.w1)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w1")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-        newText("w2", row.w2)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w2")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w3", row.w3)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w3")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w4", row.w4)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w4")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w5", row.w5)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w5")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w6", row.w6)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w6")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w7", row.w7)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w7")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w8", row.w8)
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w8")
-            .remove()
-        ,
-        newTimer(230)
-            .start()
-            .wait()
-        ,
-
-        newText("w9", row.w9)
-            .css({"font-size":"40", "color":"red"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
-        newMediaRecorder(row.filename+"_"+subject_id,"audio")
-            .record()
-        ,
-        newTimer(300)
-            .start()
-            .wait()
-        ,
-        getText("w9")
+        getText("probe")
             .remove()
         ,
         newTimer(3000)

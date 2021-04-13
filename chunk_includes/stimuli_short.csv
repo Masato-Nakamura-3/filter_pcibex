@@ -1,0 +1,17 @@
+item_id,condition,item,context_n,Group,w1,w2,w3,w4,w5,w6,w7,w8,probe,target,filename
+8,a,68a.,9,B,The,restaurant,owner,forgot,which,customer,the,waitress,had,served,exp_8a
+8,b,68b.,9,A,The,restaurant,owner,forgot,which,waitress,the,customer,had,served,exp_8b
+9,a,69a.,9,A,The,head,nun,explained,which,friar,the,temptress,had,seduced,exp_9a
+9,b,69b.,9,B,The,head,nun,explained,which,temptress,the,friar,had,seduced,exp_9b
+10,a,70a.,8,B,The,housekeeper,showed,which,mouse,the,cat,####,had,killed,exp_10a
+10,b,70b.,8,A,The,housekeeper,showed,which,cat,the,mouse,####,had,killed,exp_10b
+11,a,71a.,8,A,The,nanny,knew,which,housekeeper,the,billionaire,####,had,hired,exp_11a
+11,b,71b.,8,B,The,nanny,knew,which,billionaire,the,housekeeper,####,had,hired,exp_11b
+12,a,72a.,8,B,The,researcher,learned,which,whale,the,biologist,####,had,studied,exp_12a
+12,b,72b.,8,A,The,researcher,learned,which,biologist,the,whale,####,had,studied,exp_12b
+13,a,73a.,7,A,Tracy,announced,which,applicant,the,administrator,####,####,had,chosen,exp_13a
+13,b,73b.,7,B,Tracy,announced,which,administrator,the,applicant,####,####,had,chosen,exp_13b
+14,a,74a.,9,B,The,birthday,boy,saw,which,friend,the,clown,had,scared,exp_14a
+14,b,74b.,9,A,The,birthday,boy,saw,which,clown,the,friend,had,scared,exp_14b
+15,a,75a.,8,A,The,columnist,publicized,which,photographer,the,celebrity,####,had,punched,exp_15a
+15,b,75b.,8,B,The,columnist,publicized,which,celebrity,the,photographer,####,had,punched,exp_15b
