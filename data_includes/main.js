@@ -117,7 +117,9 @@ Template(
     GetTable("stimuli_short.csv")
     , row =>
     newTrial("exp",
-        newVar("length", row.context_n)
+        newFunction("longerthan7", ()=> row.context_n > 7)
+        ,
+        newFunction("longerthan8", ()=> row.context_n > 8)
         ,
         newText("cross","+")
             .css({"font-size":"40"})
@@ -224,8 +226,8 @@ Template(
             .start()
             .wait()
         ,
-        getVar("length")
-            .test.is(8)
+        getFunction("longerthan7")
+            .test.is(true)
             .success(
                 newText("w7", row.w7)
                     .css({"font-size":"40"})
@@ -242,38 +244,25 @@ Template(
                     .start()
                     .wait()
             )
-            .test.is(9)
-            .success(
-                newText("w7", row.w7)
-                    .css({"font-size":"40"})
-                    .print("center at 50vw", "middle at 40vh")
-                ,
-                newTimer(300)
-                    .start()
-                    .wait()
-                ,
-                getText("w7")
-                    .remove()
-                ,
-                newTimer(230)
-                    .start()
-                    .wait()
-                ,
-                newText("w8", row.w8)
-                    .css({"font-size":"40"})
-                    .print("center at 50vw", "middle at 40vh")
-                ,
-                newTimer(300)
-                    .start()
-                    .wait()
-                ,
-                getText("w8")
-                    .remove()
-                ,
-                newTimer(230)
-                    .start()
-                    .wait()
-            )
+          ,
+          getFunction("longerthan8")
+              .test.is(true)
+              .success(
+                  newText("w8", row.w8)
+                      .css({"font-size":"40"})
+                      .print("center at 50vw", "middle at 40vh")
+                  ,
+                  newTimer(300)
+                      .start()
+                      .wait()
+                  ,
+                  getText("w8")
+                      .remove()
+                  ,
+                  newTimer(230)
+                      .start()
+                      .wait()
+              )
         ,
         newText("probe", row.probe)
             .css({"font-size":"40", "color":"red"})
