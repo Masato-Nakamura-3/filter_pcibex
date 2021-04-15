@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction",randomize("exp"));
+Sequence("initiate-recorder", "recording_test","introduction",randomize("exp","filler"));
 
 // Add "consent_form",  before publishing
 
@@ -117,10 +117,6 @@ Template(
     GetTable("stimuli_short.csv")
     , row =>
     newTrial("exp",
-        newFunction("longerthan7", ()=> row.context_n > 7)
-        ,
-        newFunction("longerthan8", ()=> row.context_n > 8)
-        ,
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
@@ -226,7 +222,7 @@ Template(
             .start()
             .wait()
         ,
-        getFunction("longerthan7")
+        newVar("longerthan7", row.context_n > 7)
             .test.is(true)
             .success(
                 newText("w7", row.w7)
@@ -245,7 +241,7 @@ Template(
                     .wait()
             )
           ,
-          getFunction("longerthan8")
+          newVar("longerthan8", row.context_n > 8)
               .test.is(true)
               .success(
                   newText("w8", row.w8)
@@ -263,6 +259,276 @@ Template(
                       .start()
                       .wait()
               )
+
+        ,
+        newVar("longerthan9", row.context_n > 9)
+            .test.is(true)
+            .success(
+                newText("w9", row.w9)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w9")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan10", row.context_n > 10)
+            .test.is(true)
+            .success(
+                newText("w10", row.w10)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w10")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan11", row.context_n > 11)
+            .test.is(true)
+            .success(
+                newText("w11", row.w11)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w11")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan12", row.context_n > 12)
+            .test.is(true)
+            .success(
+                newText("w12", row.w12)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w12")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan13", row.context_n > 13)
+            .test.is(true)
+            .success(
+                newText("w13", row.w13)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w13")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newText("probe", row.probe)
+            .css({"font-size":"40", "color":"red"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newMediaRecorder(row.filename+"_"+subject_id,"audio")
+            .record()
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("probe")
+            .remove()
+        ,
+        newTimer(3000)
+            .start()
+            .wait()
+        ,
+        getMediaRecorder(row.filename+"_"+subject_id)
+            .stop()
+        ,
+
+        newText("Press the space bar")
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newKey(" ")
+            .wait()
+        )
+        .log("subject_id", subject_id)
+        .log("item_id", row.item_id)
+        .log("condition", row.condition)
+        .setOption("hideProgressBar", true)
+    )
+
+
+
+Template(
+    GetTable("stimuli_filler_short.csv")
+    , row =>
+    newTrial("filler",
+        newText("cross","+")
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(800)
+            .start()
+            .wait()
+        ,
+        getText("cross")
+            .remove()
+        ,
+        newText("w1", row.w1)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w1")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("w2", row.w2)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w2")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w3", row.w3)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w3")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newVar("longerthan4", row.context_n > 4)
+            .test.is(true)
+            .success(
+                newText("w4", row.w4)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w4")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan5", row.context_n > 5)
+            .test.is(true)
+            .success(
+                newText("w5", row.w5)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w5")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+
+        ,
+        newVar("longerthan6", row.context_n > 6)
+            .test.is(true)
+            .success(
+                newText("w6", row.w6)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w6")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
+        ,
+        newVar("longerthan7", row.context_n > 7)
+            .test.is(true)
+            .success(
+                newText("w7", row.w7)
+                    .css({"font-size":"40"})
+                    .print("center at 50vw", "middle at 40vh")
+                ,
+                newTimer(300)
+                    .start()
+                    .wait()
+                ,
+                getText("w7")
+                    .remove()
+                ,
+                newTimer(230)
+                    .start()
+                    .wait()
+            )
         ,
         newText("probe", row.probe)
             .css({"font-size":"40", "color":"red"})
