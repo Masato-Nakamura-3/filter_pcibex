@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction",randomize("exp","filler"));
+Sequence("initiate-recorder", "recording_test","introduction", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
@@ -252,6 +252,25 @@ Template(
                     .start()
                     .wait()
             )
+            ,
+            newVar("longerthan8", row.context_n > 8)
+                .test.is(true)
+                .success(
+                    newText("w8", row.w8)
+                        .css({"font-size":"40"})
+                        .print("center at 50vw", "middle at 40vh")
+                    ,
+                    newTimer(300)
+                        .start()
+                        .wait()
+                    ,
+                    getText("w8")
+                        .remove()
+                    ,
+                    newTimer(230)
+                        .start()
+                        .wait()
+                )
         ,
         newText("probe", row.probe)
             .css({"font-size":"40", "color":"red"})
@@ -506,25 +525,6 @@ Template(
                     .wait()
                 ,
                 getText("w12")
-                    .remove()
-                ,
-                newTimer(230)
-                    .start()
-                    .wait()
-            )
-        ,
-        newVar("longerthan13", row.context_n > 13)
-            .test.is(true)
-            .success(
-                newText("w13", row.w13)
-                    .css({"font-size":"40"})
-                    .print("center at 50vw", "middle at 40vh")
-                ,
-                newTimer(300)
-                    .start()
-                    .wait()
-                ,
-                getText("w13")
                     .remove()
                 ,
                 newTimer(230)

@@ -1,9 +1,9 @@
 item_id,condition,context_n,id,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,probe,filename
-101,el,12,56,Right,after,winning,the,race,at,the,famous,"racetrack,",the,####,####,####,horse,el_56
-102,el,13,57,He,finally,decided,to,shingle,the,damaged,roof,that,the,storm,####,####,had,el_57
-103,el,9,59,Pam,weighed,herself,on,the,bathroom,scale,####,####,####,####,####,####,to,el_59
-104,el,12,60,They're,out,in,the,garden,pulling,weeds,so,the,flowers,####,####,####,can,el_60
-105,sol,10,2,The,girls,asked,the,lord,for,new,gossip,####,####,####,####,####,and,sol_2
-106,sol,11,3,The,doormen,ushered,the,student,away,from,the,building,####,####,####,####,and,sol_3
-107,sol,10,6,The,old,couple,begged,the,criminal,for,mercy,####,####,####,####,####,and,sol_6
-108,sol,10,7,The,neighbors,visited,the,professor,some,days,ago,####,####,####,####,####,to,sol_7
+101,el,11,56,Right,after,winning,the,race,at,the,famous,"racetrack,",the,####,####,####,horse,el_56
+102,el,12,57,He,finally,decided,to,shingle,the,damaged,roof,that,the,storm,####,####,had,el_57
+103,el,8,59,Pam,weighed,herself,on,the,bathroom,scale,####,####,####,####,####,####,to,el_59
+104,el,11,60,They're,out,in,the,garden,pulling,weeds,so,the,flowers,####,####,####,can,el_60
+105,sol,9,2,The,girls,asked,the,lord,for,new,gossip,####,####,####,####,####,and,sol_2
+106,sol,10,3,The,doormen,ushered,the,student,away,from,the,building,####,####,####,####,and,sol_3
+107,sol,9,6,The,old,couple,begged,the,criminal,for,mercy,####,####,####,####,####,and,sol_6
+108,sol,9,7,The,neighbors,visited,the,professor,some,days,ago,####,####,####,####,####,to,sol_7
