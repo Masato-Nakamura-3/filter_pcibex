@@ -116,9 +116,9 @@ newTrial("instruction",
 
 
 Template(
-    GetTable("stimuli_filler_short.csv")
+    GetTable("stimuli_short.csv")
     , row =>
-    newTrial("filler",
+    newTrial("exp",
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
@@ -290,9 +290,9 @@ Template(
 
 
 Template(
-    GetTable("stimuli_short.csv")
+    GetTable("stimuli_filler_short.csv")
     , row =>
-    newTrial("exp",
+    newTrial("filler",
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
