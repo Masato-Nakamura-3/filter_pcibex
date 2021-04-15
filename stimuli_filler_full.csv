@@ -1,4 +1,4 @@
-item_id,condition,context_n,id,W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,probe,filename
+item_id,condition,context_n,id,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,probe,filename
 61,el,10,1,The,fertilizer,enriched,the,soil,so,the,plants,####,####,####,####,####,could,el_1
 62,el,13,2,All,the,guests,had,a,very,good,time,at,the,party,####,####,he,el_2
 63,el,4,3,The,mole,####,####,####,####,####,####,####,####,####,####,####,would,el_3

@@ -1,4 +1,4 @@
-item_id,condition,context_n,id,W1,W2,W3,W4,W5,W6,W7,W8,W9,W10,W11,W12,W13,probe,filename
+item_id,condition,context_n,id,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,probe,filename
 101,el,12,56,Right,after,winning,the,race,at,the,famous,"racetrack,",the,####,####,####,horse,el_56
 102,el,13,57,He,finally,decided,to,shingle,the,damaged,roof,that,the,storm,####,####,had,el_57
 103,el,9,59,Pam,weighed,herself,on,the,bathroom,scale,####,####,####,####,####,####,to,el_59
