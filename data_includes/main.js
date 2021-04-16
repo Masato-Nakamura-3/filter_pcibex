@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test","introduction","instruction1", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
@@ -102,8 +102,8 @@ newTrial("introduction",
 
 
 // Istruction
-newTrial("instruction",
-    newHtml("instruction.html")
+newTrial("instruction1",
+    newHtml("instruction1.html")
         .print()
     ,
     newButton("See good and bad examples")
