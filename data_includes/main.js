@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction","instruction1", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test","introduction","instruction1", "instruction2", "instruction3", "prac", "instruction_exit", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
@@ -113,12 +113,32 @@ newTrial("instruction1",
 
 
 
+
+newTrial("instruction2",
+    newHtml("instruction2.html")
+        .print()
+    ,
+    newButton("See good and bad examples")
+        .print()
+        .wait()
+    ).setOption("hideProgressBar", true);
+
+
+newTrial("instruction3",
+    newHtml("instruction3.html")
+        .print()
+    ,
+    newButton("See good and bad examples")
+        .print()
+        .wait()
+    ).setOption("hideProgressBar", true);
+
 // Practice
 
 
 
 Template(
-    GetTable("stimili_practice.csv")
+    GetTable("stimuli_practice.csv")
     , row =>
     newTrial("prac",
         newText("cross","+")
@@ -320,7 +340,18 @@ Template(
 
 
 
-// Body
+// End of the practice session    
+
+newTrial("instruction_ex",
+    newHtml("instruction_exit.html")
+        .print()
+    ,
+    newButton("See good and bad examples")
+        .print()
+        .wait()
+    ).setOption("hideProgressBar", true);
+
+// Experiment Body
 
 Template(
     GetTable("stimuli_short.csv")
