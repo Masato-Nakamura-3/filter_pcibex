@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction","instruction1", "instruction2", "instruction3", "prac", "instruction_exit", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test","introduction","instruction1", "instruction2", "prac", "instruction_exit", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
@@ -124,14 +124,6 @@ newTrial("instruction2",
     ).setOption("hideProgressBar", true);
 
 
-newTrial("instruction3",
-    newHtml("instruction3.html")
-        .print()
-    ,
-    newButton("See good and bad examples")
-        .print()
-        .wait()
-    ).setOption("hideProgressBar", true);
 
 // Practice
 
@@ -308,6 +300,44 @@ Template(
                             .start()
                             .wait()
                     )
+                ,
+                newVar("longerthan10", row.context_n > 10)
+                    .test.is(true)
+                    .success(
+                        newText("w10", row.w10)
+                            .css({"font-size":"40"})
+                            .print("center at 50vw", "middle at 40vh")
+                        ,
+                        newTimer(300)
+                            .start()
+                            .wait()
+                        ,
+                        getText("w10")
+                            .remove()
+                        ,
+                        newTimer(230)
+                            .start()
+                            .wait()
+                    )
+                ,
+                newVar("longerthan11", row.context_n > 11)
+                    .test.is(true)
+                    .success(
+                        newText("w11", row.w11)
+                            .css({"font-size":"40"})
+                            .print("center at 50vw", "middle at 40vh")
+                        ,
+                        newTimer(300)
+                            .start()
+                            .wait()
+                        ,
+                        getText("w11")
+                            .remove()
+                        ,
+                        newTimer(230)
+                            .start()
+                            .wait()
+                    )
         ,
         newText("probe", row.probe)
             .css({"font-size":"40", "color":"red"})
@@ -340,7 +370,7 @@ Template(
 
 
 
-// End of the practice session    
+// End of the practice session
 
 newTrial("instruction_ex",
     newHtml("instruction_exit.html")
