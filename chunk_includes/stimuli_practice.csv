@@ -1,11 +1,11 @@
-item_id,condition,context_n,id,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,probe
-p1,el,10,1,The,clients,visited,the,attorney,at,the,law,firm,####,####,####,####,to
-p2,el,4,2,The ,excited,audience,####,####,####,####,####,####,####,####,####,####,had
-p3,el,9,3,The,journalists,interviewed,the,coach,during,the,playoffs,####,####,####,####,####,and
-p4,el,8,4,The,princesses,avoided,the,knight,who,she,####,####,####,####,####,####,had
-p5,sol,,,The,protesters,urged,the,hunter,####,####,####,####,####,####,####,####,to
-p6,sol,,,,,,,,,,,####,####,####,####,####,
-p7,sol,,,,,,,,,,,####,####,####,####,####,
-p8,sol,,,,,,,,,,,####,####,####,####,####,
-p9,,,,,,,,,,,,,,,,,
-p10,,,,,,,,,,,,,,,,,
+item_id,condition,context_n,id,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,probe
+p1,practice,11,1,They're,out,in,the,garden,pulling,weeds,so,the,flowers,####,can
+p2,practice,5,2,I,ordered,a,ham,####,####,####,####,####,####,####,and
+p3,practice,11,3,Right,after,winning,the,race,at,the,famous,"racetrack,",the,####,horse
+p4,practice,7,4,My,car,needs,a,new,coat,####,####,####,####,####,of
+p5,practice,7,5,The,maid,loaded,the,laundry,into,####,####,####,####,####,the
+p6,practice,9,6,They,could,not,afford,to,give,their,daughter,####,####,####,the
+p7,practice,10,7,My,cat,is,covered,with,white,fur,and,a,####,####,few
+p8,practice,10,8,John,poured,himself,a,glass,of,sparkling,red,wine,####,####,to
+p9,practice,12,9,All,the,guests,had,a,very,good,time,at,the,party,he
+p10,practice,12,10,George,must,keep,his,pet,on,a,leash,so,it,does,not
