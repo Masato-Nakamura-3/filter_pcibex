@@ -1,5 +1,5 @@
 item_id,condition,item,context_n,w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,probe,filename,pos,modified
-86,el,el51,4,Before,exercising,Jack,####,####,####,####,####,####,####,####,####,####,####,always,filler_el51,v,0
+86,el,el51,4,Before,"exercising,",Jack,####,####,####,####,####,####,####,####,####,####,####,always,filler_el51,v,0
 87,el,el53,9,They,placed,an,ad,in,the,daily,paper,####,####,####,####,####,####,to,filler_el53,v,1
 88,el,el55,6,In,the,morning,he,forgot,####,####,####,####,####,####,####,####,####,to,filler_el55,v,0
 89,el,el57,12,He,finally,decided,to,shingle,the,damaged,roof,that,the,storm,####,####,####,had,filler_el57,v,0

@@ -1,0 +1,7 @@
+item_id,condition,context_n,id,w1,w2,w3,w4,w5,probe,audio,note,set
+example1,good1,6,1,People,went,to,the,beach,to,good1,swim,1
+example2,good2,6,2,The,women,asked,the,priest,for,good2,advice,1
+example3,bad1,6,3,People,went,to,the,beach,to,bad1,swim(unclear),2
+example4,bad2,6,4,People,went,to,the,beach,to,bad2,ummÅcswim,2
+example5,bad3,6,5,People,went,to,the,beach,to,bad3,sw.. jog,2
+example6,good3,6,6,The,ship,disappeared,into,the,thick,good3,fog,3
