@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction","instruction1", "instruction2", "prac", "instruction_exit", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test","introduction","instruction1", "instruction2", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
