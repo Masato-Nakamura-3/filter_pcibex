@@ -3,7 +3,9 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test", "introduction", "instruction1", "examples1", "instruction2", "examples2", "instruction3", "examples3", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test", "introduction", "instruction1", "examples1", "instruction2", "examples2",
+    "instruction3", "examples3", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")),
+    "exit_form", "send_results", "exit");
 
 // Add "consent_form",  before publishing
 
@@ -210,9 +212,9 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newAudio(row.condition, row.audio)
-            .play()
-        ,
+        //newAudio(row.condition, row.audio)
+        //    .play()
+        //,
         newTimer(300)
             .start()
             .wait()
@@ -341,9 +343,9 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newAudio(row.condition, row.audio)
-            .play()
-        ,
+        //newAudio(row.condition, row.audio)
+        //    .play()
+        //,
         newTimer(300)
             .start()
             .wait()
@@ -471,9 +473,9 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newAudio(row.condition, row.audio)
-            .play()
-        ,
+        //newAudio(row.condition, row.audio)
+        //    .play()
+        //,
         newTimer(300)
             .start()
             .wait()
@@ -1242,3 +1244,30 @@ Template(
         .log("condition", row.condition)
         .setOption("hideProgressBar", true)
     )
+
+
+
+
+newTrial("exit_form",
+    newFunction( ()=>$("body").removeClass('standout') ).call(),
+    newHtml("exit", "exit.html")
+        .print()
+        .log("worker_id","identifier"),
+    newButton("Upload the data and see the experiment code")
+        .print()
+        .wait(getHtml("exit").test.complete()
+            .failure( getHtml("exit").warn() ))
+
+).setOption("hideProgressBar", true);
+
+// Send the result to the server
+SendResults("send_results");
+
+// Exit
+newTrial("exit",
+    newHtml("exit2","exit2.html")
+        .print()
+    ,
+    newTimer(1)
+        .wait()
+).setOption("hideProgressBar", true);
