@@ -496,7 +496,7 @@ Template(
         .setOption("hideProgressBar", true)
     )
 
-newTrial("intstruction4",
+newTrial("instruction4",
     newText("Now please practice the task. <br> Please answer a continuation to each sentence. <br> Your answers will not be recorded in the practice session.")
         .print()
     ,
