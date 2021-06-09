@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test", "introduction", "instruction1", "examples1", "instruction2", "examples2",
+Sequence("consent_form", "initiate-recorder", "recording_test", "introduction", "instruction1", "examples1", "instruction2", "examples2",
     "instruction3", "examples3", "instruction4", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")),
     "exit_form", "send_results", "exit");
 
@@ -763,7 +763,7 @@ newTrial("instruction_ex",
 // Experiment Body
 
 Template(
-    GetTable("stimuli_short.csv")
+    GetTable("stimuli_full.csv")
     , row =>
     newTrial("exp",
         newText("cross","+")
@@ -945,7 +945,7 @@ Template(
 
 
 Template(
-    GetTable("stimuli_filler_short.csv")
+    GetTable("stimuli_filler_full.csv")
     , row =>
     newTrial("filler",
         newText("cross","+")
