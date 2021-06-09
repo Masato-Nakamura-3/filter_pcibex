@@ -497,7 +497,7 @@ Template(
     )
 
 newTrial("instruction4",
-    newText("Now please practice the task. <br> Please answer a continuation to each sentence. <br> Your answers will not be recorded in the practice session.")
+    newText("Now please do some practice. <br><br> Please answer a continuation to each sentence. <br> Your answers will not be recorded in the practice session.<br>")
         .print()
     ,
     newButton("Proceed to the practice session")
