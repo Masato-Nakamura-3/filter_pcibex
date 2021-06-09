@@ -3,7 +3,7 @@ PennController.ResetPrefix(null);
 
 //Set the Sequence
 // Make sure you include InitiateRecorder and SendResults
-Sequence("initiate-recorder", "recording_test","introduction", "instruction1", "instruction2", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")));
+Sequence("initiate-recorder", "recording_test","introduction", "instruction1", "examples1", "instruction2", "examples2", "instruction3", "examples3", "prac", "instruction_ex", shuffle(randomize("exp"), randomize("filler")));
 
 // Add "consent_form",  before publishing
 
@@ -117,7 +117,7 @@ Template(
     GetTable("stimuli_examples.csv")
       .filter( row => row.set == 1)
     , row =>
-    newTrial("examples_1",
+    newTrial("examples1",
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
@@ -239,11 +239,261 @@ newTrial("instruction2",
     newHtml("instruction2.html")
         .print()
     ,
-    newButton("See good and bad examples")
+    newButton("See bad examples")
         .print()
         .wait()
     ).setOption("hideProgressBar", true);
 
+Template(
+    GetTable("stimuli_examples.csv")
+      .filter( row => row.set == 2)
+    , row =>
+    newTrial("examples2",
+        newText("cross","+")
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(800)
+            .start()
+            .wait()
+        ,
+        getText("cross")
+            .remove()
+        ,
+        newText("w1", row.w1)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w1")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("w2", row.w2)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w2")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w3", row.w3)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w3")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("w4", row.w4)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w4")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w5", row.w5)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w5")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("probe", row.probe)
+            .css({"font-size":"40", "color":"red"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newAudio(row.condition, row.audio)
+            .play()
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("probe")
+            .remove()
+        ,
+        newTimer(3000)
+            .start()
+            .wait()
+        ,
+
+        newText("Press the space bar")
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newKey(" ")
+            .wait()
+        )
+        .setOption("hideProgressBar", true)
+    )
+
+newTrial("intstruction3",
+    newText("Finally, see a good example again.")
+        .print()
+    ,
+    newButton("See a good example")
+        .print()
+        .wait()
+    ).setOption("hideProgressBar", true);
+
+Template(
+    GetTable("stimuli_examples.csv")
+      .filter( row => row.set == 1)
+    , row =>
+    newTrial("examples1",
+        newText("cross","+")
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(800)
+            .start()
+            .wait()
+        ,
+        getText("cross")
+            .remove()
+        ,
+        newText("w1", row.w1)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w1")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("w2", row.w2)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w2")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w3", row.w3)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w3")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("w4", row.w4)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w4")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+
+        newText("w5", row.w5)
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("w5")
+            .remove()
+        ,
+        newTimer(230)
+            .start()
+            .wait()
+        ,
+        newText("probe", row.probe)
+            .css({"font-size":"40", "color":"red"})
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newAudio(row.condition, row.audio)
+            .play()
+        ,
+        newTimer(300)
+            .start()
+            .wait()
+        ,
+        getText("probe")
+            .remove()
+        ,
+        newTimer(3000)
+            .start()
+            .wait()
+        ,
+
+        newText("Press the space bar")
+            .print("center at 50vw", "middle at 40vh")
+        ,
+        newKey(" ")
+            .wait()
+        )
+        .setOption("hideProgressBar", true)
+    )
 
 
 // Practice
