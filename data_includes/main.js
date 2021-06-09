@@ -376,9 +376,9 @@ newTrial("intstruction3",
 
 Template(
     GetTable("stimuli_examples.csv")
-      .filter( row => row.set == 1)
+      .filter( row => row.set == 3)
     , row =>
-    newTrial("examples1",
+    newTrial("examples3",
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
