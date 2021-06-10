@@ -366,7 +366,7 @@ Template(
         .setOption("hideProgressBar", true)
     )
 
-newTrial("intstruction3",
+newTrial("instruction3",
     newText("Finally, see a good example again.")
         .print()
     ,
