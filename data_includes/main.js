@@ -108,7 +108,7 @@ newTrial("instruction1",
     newHtml("instruction1.html")
         .print()
     ,
-    newButton("See good and bad examples")
+    newButton("See good examples")
         .print()
         .wait()
     ).setOption("hideProgressBar", true);
@@ -211,10 +211,14 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        //newAudio(row.condition, row.audio)
-        //    .play()
-        //,
-        newTimer(300)
+        newTimer(150)
+            .start()
+            .wait()
+        ,
+        newAudio(row.condition, row.audio)
+            .play()
+        ,
+        newTimer(150)
             .start()
             .wait()
         ,
@@ -342,10 +346,14 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        //newAudio(row.condition, row.audio)
-        //    .play()
-        //,
-        newTimer(300)
+        newTimer(150)
+            .start()
+            .wait()
+        ,
+        newAudio(row.condition, row.audio)
+            .play()
+        ,
+        newTimer(150)
             .start()
             .wait()
         ,
@@ -497,7 +505,7 @@ Template(
     )
 
 newTrial("instruction4",
-    newText("Now please do some practice. <br><br> Please answer a continuation to each sentence. <br> Your answers will not be recorded in the practice session.<br>")
+    newText("Now let's practice! <br><br> Please answer a continuation to each sentence. <br> Your answers will not be recorded in the practice session.<br>")
         .print()
     ,
     newButton("Proceed to the practice session")
@@ -755,7 +763,7 @@ newTrial("instruction_ex",
     newHtml("instruction_exit.html")
         .print()
     ,
-    newButton("See good and bad examples")
+    newButton("Press to start the experiment")
         .print()
         .wait()
     ).setOption("hideProgressBar", true);
