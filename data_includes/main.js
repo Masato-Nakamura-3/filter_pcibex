@@ -211,14 +211,10 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newTimer(150)
-            .start()
-            .wait()
-        ,
         newAudio(row.condition, row.audio)
             .play()
         ,
-        newTimer(150)
+        newTimer(300)
             .start()
             .wait()
         ,
@@ -346,14 +342,10 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newTimer(150)
-            .start()
-            .wait()
-        ,
         newAudio(row.condition, row.audio)
             .play()
         ,
-        newTimer(150)
+        newTimer(300)
             .start()
             .wait()
         ,
@@ -480,9 +472,9 @@ Template(
             .css({"font-size":"40", "color":"red"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        //newAudio(row.condition, row.audio)
-        //    .play()
-        //,
+        newAudio(row.condition, row.audio)
+            .play()
+        ,
         newTimer(300)
             .start()
             .wait()
