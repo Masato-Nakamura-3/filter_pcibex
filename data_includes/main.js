@@ -123,6 +123,10 @@ Template(
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
+        newText("ex_note", row.text)
+            .css({"font-size":"30"})
+            .print("center at 10vw", "middle at 10vh")
+        ,
         newTimer(800)
             .start()
             .wait()
