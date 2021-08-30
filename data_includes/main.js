@@ -123,10 +123,6 @@ Template(
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
         ,
-        newText("ex_note", row.text)
-            .css({"font-size":"30"})
-            .print("center at 10vw", "middle at 10vh")
-        ,
         newTimer(800)
             .start()
             .wait()
@@ -257,6 +253,10 @@ Template(
         newText("cross","+")
             .css({"font-size":"40"})
             .print("center at 50vw", "middle at 40vh")
+        ,
+        newText("ex_note", row.text)
+            .css({"font-size":"25", "text-decoration":"underline"})
+            .print("left at 10vw", "top at 10vh")
         ,
         newTimer(800)
             .start()
