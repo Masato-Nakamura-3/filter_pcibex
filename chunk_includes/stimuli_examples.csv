@@ -1,7 +1,7 @@
 ﻿item_id,condition,context_n,id,w1,w2,w3,w4,w5,probe,audio,note,set
-example1,good1,6,1,People,went,to,the,beach,to,good1.m4a,swim,1
-example2,good2,6,2,The,women,asked,the,priest,for,good2.m4a,advice,1
-example3,bad1,6,3,People,went,to,the,beach,to,bad1.m4a,swim(unclear),2
-example4,bad2,6,4,People,went,to,the,beach,to,bad2.m4a,umm…swim,2
-example5,bad3,6,5,People,went,to,the,beach,to,bad3.m4a,sw.. jog,2
-example6,good3,6,6,The,ship,disappeared,into,the,thick,good3.m4a,fog,3
+example1,good1,6,1,People,went,to,the,beach,to,good1.wav,swim,1
+example2,good2,6,2,The,women,asked,the,priest,for,good2.wav,advice,1
+example3,bad1,6,3,People,went,to,the,beach,to,bad1.wav,swim(unclear),2
+example4,bad2,6,4,People,went,to,the,beach,to,bad2.wav,umm…swim,2
+example5,bad3,6,5,People,went,to,the,beach,to,bad3.wav,sw.. jog,2
+example6,good3,6,6,The,ship,disappeared,into,the,thick,good3.wav,fog,3
