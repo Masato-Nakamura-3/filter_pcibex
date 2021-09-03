@@ -250,13 +250,17 @@ Template(
       .filter( row => row.set == 2)
     , row =>
     newTrial("examples2",
-        newText("cross","+")
-            .css({"font-size":"40"})
-            .print("center at 50vw", "middle at 40vh")
-        ,
         newText("ex_note", row.text)
             .css({"font-size":"25", "text-decoration":"underline"})
             .print("left at 10vw", "top at 10vh")
+        ,
+        newTimer(1000)
+            .start()
+            .wait()
+        ,
+        newText("cross","+")
+            .css({"font-size":"40"})
+            .print("center at 50vw", "middle at 40vh")
         ,
         newTimer(800)
             .start()
